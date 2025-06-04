@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    color: aliceblue;
+    margin: auto;
+}
+.container {
+    width: 85vw;
+    font-family: Oswald;
+}
+header {
+    display: flex;
+    height: 50px;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+header h1 {
+    font-weight: 500;
+    font-size: 30px;
+}
+.header-right {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+header a {
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffffffb4;
+}
+main {
+    background-color: #fff;
+    position: relative;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 300px;
+    opacity: 0.8;
+}
+
+.ds1 img,
+.ds2 img,
+.ds3 img {
+    height: 130%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.ds1 img {
+    object-position: 50%;
+    margin-left: 0%;
+    transition: all ease-in-out 1s;
+    transition-delay: 500ms;
+    z-index: 2;
+    width: 45%;
+    clip-path: polygon(0% 0%, 0% 0%, 98% 0%, 0% 140%);
+}
+.ds1:hover img {
+    clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 0% 500%);
+    width: 118%;
+    z-index: 123;
+}
+
+.ds2 img {
+    margin-left: 10%;
+    width: 77%;
+    object-position: 50%;
+    z-index: 10;
+    clip-path: polygon(31% 0%, 63% 0%, 100% 100%, 0% 100%);
+    transition: all ease-in-out 1000ms;
+    transition-delay: 500ms;
+}
+.ds2:hover img {
+    width: 120%;
+    margin-left: 0%;
+    z-index: 123;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.ds3 img {
+    margin-left: 58.5%;
+    width: 42%;
+    clip-path: polygon(100% 0%, 0% 0%, 0% 0%, 100% 160%);
+    transition: all ease-in-out 1s;
+    transition-delay: 500ms;
+    object-position: 40%;
+    z-index: 2;
+}
+.ds3:hover img {
+    width: 111%;
+    margin-left: -10%;
+    clip-path: polygon(100% 0%, 0% 0%, 0% 0%, 100% 990%);
+}
+
+.ds1 .text,
+.ds2 .text,
+.ds3 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.904);
+    font-size: x;
+    z-index: 999;
+    bottom: 10%;
+    left: 2%;
+    width: 30vw;
+    height: 25vh;
+    transition: opacity 1s ease, visibility 30ms ease;
+    transition-delay: 200ms;
+    border: #fff solid 2px;
+    border-radius: 12px;
+    padding: 10px 30px;
+    background: rgba(24, 24, 24, 0.5);
+}
+.ds1:hover .text,
+.ds2:hover .text,
+.ds3:hover .text {
+    transition-delay: 1900ms;
+}
+.ds1 .text span,
+.ds2 .text span,
+.ds3 .text span {
+    font-size: 2rem;
+    font-weight: 600;
+}
