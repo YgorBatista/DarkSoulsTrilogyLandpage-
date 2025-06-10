@@ -6,7 +6,7 @@ function applyTextHover(containerSelector) {
     //verificacao para aplicar o efeito
     if (!container || !img || !text) return;
 
-    //efeito no hover
+    //alteração no hover
 
     container.addEventListener('mouseenter', () => {
         document.querySelectorAll('.text').forEach(t => {
@@ -25,7 +25,7 @@ function applyTextHover(containerSelector) {
         text.style.visibility = 'visible';
     });
 
-    //efeito ao sair do hover
+    //alteração ao sair do hover
 
     container.addEventListener('mouseleave', () => {
         text.style.opacity = '0';

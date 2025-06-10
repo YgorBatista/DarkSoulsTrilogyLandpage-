@@ -1,6 +1,8 @@
 * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Oswald;
 }
 body {
     background-color: black;
@@ -8,11 +10,11 @@ body {
     margin: auto;
 }
 .container {
-    width: 85vw;
-    font-family: Oswald;
+    width: 75vw;
 }
 header {
     display: flex;
+    padding: 0 5% 0 5%;
     height: 50px;
     margin-top: 20px;
     justify-content: space-between;
@@ -42,14 +44,15 @@ main {
     margin: auto;
     display: flex;
     overflow: hidden;
-    margin-bottom: 300px;
+    margin-bottom: 10%;
     opacity: 0.8;
 }
 
 .ds1 img,
 .ds2 img,
 .ds3 img {
-    height: 130%;
+    height: 110%;
+    width: 50%;
     object-fit: cover;
     position: absolute;
 }
@@ -60,21 +63,21 @@ main {
     transition: all ease-in-out 1s;
     transition-delay: 500ms;
     z-index: 2;
-    width: 45%;
-    clip-path: polygon(0% 0%, 0% 0%, 98% 0%, 0% 140%);
+    width: 45.5%;
+    clip-path: polygon(0% 0%, 0% 0%, 80% 0%, 0% 210%);
 }
 .ds1:hover img {
-    clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 0% 500%);
-    width: 118%;
+    clip-path: polygon(0% 0%, 0% 0%, 100% 00%, 0% 500%);
+    width: 125%;
     z-index: 123;
 }
 
 .ds2 img {
-    margin-left: 10%;
-    width: 77%;
-    object-position: 50%;
+    margin-left: 19%;
+    width: 61.1%;
+    object-position: 60%;
     z-index: 10;
-    clip-path: polygon(31% 0%, 63% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(28% 0%, 68% 0%, 96% 100%, 0% 100%);
     transition: all ease-in-out 1000ms;
     transition-delay: 500ms;
 }
@@ -85,9 +88,9 @@ main {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .ds3 img {
-    margin-left: 58.5%;
+    margin-left: 60.5%;
     width: 42%;
-    clip-path: polygon(100% 0%, 0% 0%, 0% 0%, 100% 160%);
+    clip-path: polygon(100% 0%, 0% 0%, 0% 0%, 100% 250%);
     transition: all ease-in-out 1s;
     transition-delay: 500ms;
     object-position: 40%;
@@ -117,7 +120,7 @@ main {
     width: 30vw;
     height: 25vh;
     transition: opacity 1s ease, visibility 30ms ease;
-    transition-delay: 200ms;
+    transition-delay: 500ms;
     border: #fff solid 2px;
     border-radius: 12px;
     padding: 10px 30px;
@@ -126,11 +129,74 @@ main {
 .ds1:hover .text,
 .ds2:hover .text,
 .ds3:hover .text {
-    transition-delay: 1900ms;
+    transition-delay: 1500ms;
 }
 .ds1 .text span,
 .ds2 .text span,
 .ds3 .text span {
     font-size: 2rem;
     font-weight: 600;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section .paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12%;
+}
+section .paragraph h2 {
+    color: #ffa31a;
+    font-size: 4rem;
+    margin-bottom: 2%;
+}
+section .paragraph span {
+    color: #ffa31a;
+    font-size: 2rem;
+}
+section .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    margin: auto;
+    flex-direction: row;
+    margin-bottom: 30vh;
+}
+section .description p {
+    font-size: 2rem;
+}
+section .description img {
+    height: 70vh;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+}
+.image-n-text {
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15vh;
+}
+.image-n-text:last-child {
+    margin-bottom: 100vh;
+}
+.image-n-text img {
+    width: 35vw;
+}
+.section-text span {
+    font-size: 2.5rem;
+}
+.section-text p {
+    width: 30vw;
+    font-size: 2rem;
+    padding-top: 2%;
 }
