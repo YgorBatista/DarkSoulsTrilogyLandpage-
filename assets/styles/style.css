@@ -200,3 +200,76 @@ section .description img {
     font-size: 2rem;
     padding-top: 2%;
 }
+.forSale {
+    display: flex;
+    align-items: normal;
+    margin-bottom: 50px;
+}
+.forSale h2 {
+    font-size: 3rem;
+    width: 75vw;
+    margin: auto;
+    margin-bottom: 3%;
+}
+.forSale .cards {
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.forSale .card {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    width: 20vw;
+    border-radius: 12px;
+    transition: ease 300ms all;
+}
+.forSale .card:hover {
+    scale: 1.05;
+}
+.forSale .card img {
+    margin: auto;
+    margin-top: 12px;
+    width: 400px;
+    height: 600px;
+    border-radius: 12px;
+}
+.forSale .plataforms {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+.forSale .plataforms img {
+    border: solid white 2px;
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 75vw;
+    height: 5vh;
+    margin: auto;
+
+    margin-bottom: 50px;
+    margin-top: 500px;
+    font-size: 1.5rem;
+}
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer img {
+    margin: 10px 10px;
+    width: 35px;
+    height: 35px;
+}
