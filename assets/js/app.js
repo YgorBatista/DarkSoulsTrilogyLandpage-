@@ -43,3 +43,52 @@ function applyTextHover(containerSelector) {
 applyTextHover('.ds1');
 applyTextHover('.ds2');
 applyTextHover('.ds3');
+
+// elementos com  gsap
+// funções de animação paragraph e information
+function animateParagraph() {
+    const tlParagraph = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.paragraph',
+            start: 'top 60%',
+            end: 'bottom 100%',
+            toggleActions: ' play none none none '
+        }
+    });
+    tlParagraph.fromTo(
+        '.paragraph',
+        {
+            opacity: 0,
+            y: 100
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.3
+        }
+    );
+    tlParagraph.fromTo('.paragraph h2', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5 });
+    tlParagraph.fromTo('.paragraph .divider', { width: 0 }, { width: '80%', duration: 1 }, '-=0.3');
+    tlParagraph.fromTo('.paragraph span', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1 }, '-=0.5');
+}
+
+// .information
+function animateInformation() {
+    const tlInformation = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.information',
+            start: '-30% top',
+            end: '10% bottom',
+            toggleActions: 'play none none none'
+        }
+    });
+    tlInformation.fromTo('.information h2', { opacity: 0 }, { opacity: 1, duration: 0.6 });
+}
+
+// fade
+document.querySelectorAll('.fade').forEach(e => {
+    gsap.fromTo(e, { opacity: 0, y: '20px' }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', scrollTrigger: { trigger: e, start: 'top 60%', toggleActions: 'play none none none' } });
+});
+
+animateParagraph();
+animateInformation();

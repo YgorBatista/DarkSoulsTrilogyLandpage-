@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet"
+        />
         <title>Games</title>
     </head>
     <!--HERO  -->
@@ -14,11 +17,14 @@
         <header>
             <h1>DARK SOULS LEGACY</h1>
 
-            <div class="header-right"><a href="">About</a> <a href="https://store.steampowered.com/sale/DarkSoulsFranchise">Buy Now</a></div>
+            <div class="header-right">
+                <a href="#about">About</a>
+                <a href="#buy">Buy Now</a>
+            </div>
         </header>
         <main class="container">
             <div class="card1">
-                <a class="ds1" href="">
+                <a class="ds1" href="#">
                     <img src="assets/img/ds1.jpg" alt="" />
                     <div class="text">
                         <span>DARK SOULS REMASTERED </span>
@@ -29,7 +35,7 @@
                 </a>
             </div>
             <div class="card2">
-                <a class="ds2" href="">
+                <a class="ds2" href="#">
                     <img src="assets/img/ds2.jpg" alt="" />
                     <div class="text">
                         <span>DARK SOULS 2: SCHOLAR OF THE FIRST SIN</span>
@@ -38,7 +44,7 @@
                 </a>
             </div>
             <div class="card3">
-                <a class="ds3" href="">
+                <a class="ds3" href="#">
                     <img src="assets/img/ds3.jpg" alt="" />
                     <div class="text">
                         <span>DARK SOULS 3: COMPLETE EDITION </span>
@@ -51,24 +57,23 @@
         <section>
             <div class="paragraph">
                 <h2>Ecos do primeira chama</h2>
+                <hr class="divider" />
                 <span>Três eras marcadas pela fogo, e pela inevitável escuridão.</span>
             </div>
 
-            <div class="description">
+            <div class="description fade">
                 <p>
-                    A trilogia Dark Souls segue uma linha narrativa marcada por ciclos eternos, onde o mundo oscila entre luz e trevas, ordem e ruína. O primeiro jogo estabelece as bases desse
-                    universo, apresentando um mundo à beira do colapso, governado por seres poderosos e assolado por uma maldição que atinge os vivos e os mortos. É nesse cenário que surge o Escolhido
-                    dos Mortos-Vivos, uma figura silenciosa guiada por um destino enigmático, encarando forças antigas e escolhas com consequências irreversíveis. No segundo capítulo, somos levados a
-                    uma nova terra, diferente em aparência, mas familiar em essência. Nela, o Portador da Maldição caminha entre ruínas e ecos de eras esquecidas, buscando respostas sobre si mesmo e
-                    sobre a natureza cíclica daquele mundo. Embora com personagens distintos e uma história aparentemente separada, tudo ressoa com os eventos anteriores, como se o tempo e a
-                    identidade fossem apenas fragmentos distorcidos de algo maior. O terceiro jogo encerra a trilogia retornando à origem — não em localização, mas em espírito. Aqui, o mundo se
-                    encontra à beira do esquecimento, e a chama da era atual vacila em suas últimas brasas. Surge o Inaceso, um ser que sequer foi digno da chama, mas que se ergue para desafiar os
-                    próprios pilares do ciclo. Suas ações ecoam as decisões do passado, enquanto tudo parece convergir para um fim inevitável — ou talvez, um novo começo.
+                    A trilogia Dark Souls explora um ciclo eterno entre luz e trevas, ordem e ruína. No primeiro jogo, o Escolhido dos Mortos-Vivos enfrenta um mundo em colapso, marcado por uma
+                    maldição e escolhas irreversíveis. No segundo, o Portador da Maldição busca respostas em uma terra diferente, mas conectada aos eventos passados. Já o terceiro apresenta o Inaceso,
+                    que se levanta em um mundo à beira do esquecimento para desafiar o fim do ciclo. Apesar de histórias distintas, os três jogos estão ligados por temas recorrentes e um destino
+                    cíclico.
                 </p>
                 <img src="assets/img/firekepper.png" alt="" />
             </div>
-            <div class="information">
-                <div class="image-n-text">
+            <div class="information" id="about">
+                <h2>Explore a Trilogia</h2>
+                <hr class="divider" />
+                <div class="image-n-text fade">
                     <img src="assets/img/ds1-gameplay.webp" alt="" />
                     <div class="section-text">
                         <span>DARK SOULS </span>
@@ -79,9 +84,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="image-n-text">
+                <div class="image-n-text fade">
                     <div class="section-text">
-                        <span>DARK SOULS 2</span>
+                        <span>DARK SOULS 2: Scholar of the First Sin </span>
                         <p>
                             Na terra distante de Drangleic, outro amaldiçoado surge, guiado por ecos de promessas antigas e reis enlouquecidos. A chama queima mais fraca, e os rostos mudam, mas o
                             ciclo continua. Com novas coroas, antigos pactos e uma constante sensação de déjà vu, o jogador percorre um mundo que esquece seus próprios erros — apenas para repeti-los.
@@ -89,7 +94,7 @@
                     </div>
                     <img src="assets/img/ds2-gameplay.jpg" alt="" />
                 </div>
-                <div class="image-n-text">
+                <div class="image-n-text fade">
                     <img src="assets/img/ds3-gameplay.jpg" alt="" />
                     <div class="section-text">
                         <span>DARK SOULS 3 </span>
@@ -102,40 +107,111 @@
                 </div>
             </div>
         </section>
-        <section class="forSale">
-            <h2>Compre agora</h2>
+        <section class="forSale" id="buy">
+            <h2><img src="assets/img/bag.png" alt="bag" />Compre agora</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="assets/img/ds-cover.jpg" alt="" />
+                    <img src="assets/img/ds-cover.jpg" alt="dark souls remastered cover " />
+                    <ul>
+                        <li>Inclui a DLC Artorias of the abysss</li>
+                        <li>Gráficos aprimorados em 60FPS</li>
+                        <li>Multiplayer online até 6 jogadores</li>
+                    </ul>
                     <div class="plataforms">
-                        <a href=""><img src="assets/img/ps-logo.svg" alt="" /></a>
-                        <a href=""><img src="assets/img/xbox-logo.svg" alt="" /></a>
-                        <a href=""><img src="assets/img/steam-logo.svg" alt="" /></a>
-                        <a href=""><img src="assets/img/nintendo-logo.svg" alt="" /></a>
+                        <a class="playstation" href="https://store.playstation.com/pt-br/product/UP0700-CUSA08692_00-DARKSOULSHD00000"
+                            ><img src="assets/img/ps-logo.svg" alt="playstation link" />
+                            <p>Playstation</p></a
+                        >
+                        <a class="xbox" href="https://www.xbox.com/pt-BR/games/store/dark-souls-remastered/bs18vcf4nlq9"
+                            ><img src="assets/img/xbox-logo.svg" alt="xbox link" />
+                            <p>Xbox</p></a
+                        >
+                        <a class="steam" href="https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/"
+                            ><img src="assets/img/steam-logo.svg" alt="steam link" />
+                            <p>Steam</p></a
+                        >
+                        <a class="nintendo" href="https://www.nintendo.com/pt-br/store/products/dark-souls-remastered-switch/?srsltid=AfmBOorMBr6yi744fJQPi_SNy64W4vnJeLr1U0A-4-SOnd_NYOcczS6j"
+                            ><img src="assets/img/nintendo-logo.svg" alt="nintendo link" />
+                            <p>Nintendo</p></a
+                        >
                     </div>
                 </div>
                 <div class="card">
-                    <img src="assets/img/ds2-cover.jpg" alt="" />
+                    <img src="assets/img/ds2-cover.jpg" alt="dark souls 2: scholar of the first sin cover " />
+                    <ul>
+                        <li>Inclui as 3 DLCs: Crown of the Sunken, Iron e Ivory King</li>
+                        <li>Versão Scholar of the First Sin com novos inimigos e NPC's</li>
+                        <li>IA mais desafiadora e ajustes no level design</li>
+                    </ul>
                     <div class="plataforms">
-                        <a href=""><img src="assets/img/ps-logo.svg" alt="" /></a>
-                        <a href=""><img src="assets/img/xbox-logo.svg" alt="" /></a>
-                        <a href=""><img src="assets/img/steam-logo.svg" alt="" /></a>
+                        <a class="playstation" href="https://www.playstation.com/pt-br/games/dark-souls-ii-scholar-of-the-first-sin/"
+                            ><img src="assets/img/ps-logo.svg" alt="playstation link" />
+                            <p>Playstation</p></a
+                        >
+                        <a class="xbox" href="https://www.xbox.com/pt-BR/games/store/dark-souls-ii-scholar-of-the-first-sin/BVBQ72FDB4LK"
+                            ><img src="assets/img/xbox-logo.svg" alt="xbox link " />
+                            <p>Xbox</p></a
+                        >
+                        <a class="steam" href="https://store.steampowered.com/app/335300/DARK_SOULS_II_Scholar_of_the_First_Sin/"
+                            ><img src="assets/img/steam-logo.svg" alt="steam link " />
+                            <p>Steam</p>
+                        </a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="assets/img/ds3-cover.jpg" alt="" />
+                    <img src="assets/img/ds3-cover.jpg" alt="dark souls 3: complete edition cover" />
+                    <ul>
+                        <li>Inclui as DLCs: Ashes of Ariandel e The Ringed City</li>
+                        <li>Acesso a novas armas, magias e chefes lendários</li>
+                        <li>Versão completa com todos os patches e balanceamentos</li>
+                    </ul>
                     <div class="plataforms">
-                        <a href=""><img src="assets/img/ps-logo.svg" alt="" /></a>
-                        <a href=""><img src="assets/img/xbox-logo.svg" alt="" /></a>
-                        <a href=""><img src="assets/img/steam-logo.svg" alt="" /></a>
+                        <a class="playstation" href="https://store.playstation.com/pt-pt/product/EP0700-CUSA03365_00-DSIIIDELUXE00000"
+                            ><img src="assets/img/ps-logo.svg" alt="playstation link " />
+                            <p>Playstation</p></a
+                        >
+                        <a class="xbox" href="https://www.xbox.com/pt-BR/games/store/dark-souls-iii-deluxe-edition/C23CWXL81H3L/0001"
+                            ><img src="assets/img/xbox-logo.svg" alt="xbox link " />
+                            <p>Xbox</p></a
+                        >
+                        <a class="steam" href="https://store.steampowered.com/sub/94174/"
+                            ><img src="assets/img/steam-logo.svg" alt="steam link " />
+                            <p>Steam</p></a
+                        >
                     </div>
                 </div>
             </div>
         </section>
+        <section class="see">
+            <h1>Veja tambem</h1>
+            <div class="see-also">
+                <a href=""><img src="assets/img/bloodborne.jpg" alt="" /></a>
+                <a href=""> <img src="assets/img/sekiro.jpg" alt="" /></a>
+                <a href=""><img src="assets/img/elden ring.jpg" alt="" /></a>
+            </div>
+        </section>
         <footer>
-            <p>Feito por Ygor <img src="assets/img/bonfire.gif" alt="" /> 2025</p>
-        </footer>
-    </body>
+            <div class="info">
+                <div class="social">
+                    <p>Siga-nos</p>
+                    <a href="https://www.youtube.com/@FromSoftwareInc"><img src="assets/img/youtube.svg" alt="youtube" /></a>
+                    <a href="https://x.com/fromsoftware_pr"><img src="assets/img/X.svg" alt="X" /></a>
+                    <a href="https://www.instagram.com/fromsoftware_jp/"> <img src="assets/img/instagram.svg" alt="instagram" /></a>
+                    <a href="https://www.facebook.com/fromsoftware.jp/"> <img src="assets/img/facebook.svg" alt="facebook" /></a>
+                </div>
 
-    <script src="assets/js/app.js"></script>
+                <h3>FromSoftware<span>©</span></h3>
+                <div class="terms-about">
+                    <a href="https://www.fromsoftware.jp/ww/policy_privacy.html"><p>privacidade e termos</p></a>
+                    <a href="https://www.fromsoftware.jp/ww/company_about.html"><p>Sobre a FromSoftware</p></a>
+                    <a href="https://www.fromsoftware.jp/ww/products.html"><p>Produtos</p></a>
+                </div>
+            </div>
+            <span class="creator">2025 Projeto sem afiliação oficial. Todos os direitos reservados. <img src="assets/img/bonfire.gif" alt="bonfire gif" /></span>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
 </html>
