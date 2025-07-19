@@ -208,6 +208,8 @@ section .description img {
     justify-content: center;
     align-items: center;
     margin: auto;
+    background-color: #1b1b1b46;
+    width: 100%;
 }
 .information h2 {
     color: var(--title-color);
@@ -220,10 +222,10 @@ section .description img {
     width: 100%;
     height: 100%;
     margin-bottom: 8vh;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 15vw;
 }
 .image-n-text:last-child {
     margin-bottom: 15vh;
@@ -255,10 +257,11 @@ section .description img {
 }
 .forSale {
     display: flex;
-    align-items: normal;
-    margin-bottom: 8vh;
-    width: 90vw;
-    margin: auto;
+    background: linear-gradient(to bottom, #131313 0%, black 100%);
+
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    width: 100%;
 }
 .forSale h2 {
     font-size: 48px;
@@ -271,12 +274,14 @@ section .description img {
 }
 .forSale h2 img {
     width: 72px;
+    padding-bottom: 10px;
     margin-right: 2vh;
     filter: brightness(0) saturate(100%) invert(1);
 }
 .forSale .cards {
     width: 80vw;
     margin: auto;
+    gap: 32px;
 
     display: flex;
     justify-content: space-evenly;
@@ -286,12 +291,11 @@ section .description img {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     border: #20202077 solid 2px;
     align-items: center;
-
-    width: 100%;
-    height: 90vh;
-    max-width: 420px;
+    margin: 0 3%;
+    flex: 1;
     border-radius: 12px;
     transition: ease 0.4s all;
     opacity: 0.7;
@@ -303,9 +307,9 @@ section .description img {
     opacity: 1;
 }
 .forSale .card img {
-    margin: auto;
-    margin-top: 2vh;
-    height: 50%;
+    width: 80%;
+    margin: 1vh 0;
+    height: auto;
     aspect-ratio: 2/3;
     border-radius: 12px;
     transition: ease-in-out 500ms;
@@ -313,7 +317,7 @@ section .description img {
 
 .forSale .card ul {
     width: 80%;
-
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -322,7 +326,6 @@ section .description img {
 }
 .forSale .card ul li {
     font-size: 16px;
-    margin: 2vh;
 }
 .forSale .plataforms {
     display: flex;
@@ -344,8 +347,7 @@ section .description img {
     text-decoration: none;
     transition: background-color ease-in-out 200ms, width ease-in-out 500ms;
 }
-.forSale .plataforms a:hover {
-}
+
 .forSale .plataforms a img {
     width: 60%;
     height: 60%;
@@ -376,31 +378,43 @@ section .description img {
     margin: auto;
     justify-content: center;
     align-items: center;
+    background-color: #1a1a1ab6;
+    padding: 4vh 0;
 }
 .see h1 {
     text-align: left;
     width: 70vw;
     margin-bottom: 8vh;
-    margin-top: 8vh;
     font-size: 48px;
 }
 .see-also {
-    height: 20vw;
     display: flex;
-    overflow: hidden;
+    padding: 3vh 0;
+}
+.see-also .see-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-wrap: wrap;
 }
 
-.see-also img {
-    width: 25vw;
+.see-also .see-info img {
+    width: 30vw;
     height: auto;
-    border: #2b2a2a60 solid 4px;
-    margin: 1vw;
+    border: #2b2a2ab4 solid 2px;
+    margin: 0 1vw;
     border-radius: 18px;
     transition: all 300ms ease-in-out;
     opacity: 0.7;
 }
 .see-also img:hover {
     opacity: 1;
+}
+.see-also .see-info p {
+    width: 30vw;
+    font-size: 12px;
+    text-align: center;
 }
 footer {
     background-color: #1b1b1b;
@@ -411,7 +425,6 @@ footer .info {
     align-self: center;
     width: 100%;
     margin: 0 auto;
-    margin-top: 8px;
     font-size: 1.5rem;
     color: #aaa;
 }
@@ -428,6 +441,7 @@ footer .social {
     height: 8vh;
     margin-top: 10px;
     display: flex;
+
     flex: 1;
     border-right: #3d3d3d67 solid 1px;
     justify-content: center;
@@ -498,7 +512,7 @@ footer span img {
     height: 35px;
 }
 
-@media (max-width: 1740px) {
+@media (max-width: 1790px) {
     section .paragraph {
         margin-top: 4vh;
         margin-bottom: 4vh;
@@ -518,9 +532,7 @@ footer span img {
     .section-text p {
         font-size: 14px;
     }
-    section .description {
-        border: solid 2px red;
-    }
+
     section .description p {
         font-size: 20px;
     }
@@ -529,6 +541,9 @@ footer span img {
     }
     .information h2 {
         font-size: 48px;
+        margin-bottom: 2vh;
+    }
+    .information .divider {
         margin-bottom: 10vh;
     }
     .forSale h2,
@@ -537,16 +552,14 @@ footer span img {
 
         margin-bottom: 2vh;
     }
-    .forSale .card {
-        max-width: 350px;
-        height: 70vh;
-    }
+
     .forSale .card img {
-        height: 47%;
+        width: 80%;
+        min-width: auto;
     }
     .forSale .card ul li {
         font-size: 12px;
-        margin: 2vh;
+        margin: 1vh;
     }
     .forSale .plataforms a {
         width: 50px;
@@ -558,7 +571,6 @@ footer span img {
 }
 @media (max-width: 1250px) {
     body {
-        border: 1px solid blue;
     }
     .image-n-text {
         display: flex;
@@ -582,50 +594,69 @@ footer span img {
         margin-bottom: 10%;
         font-size: 42px;
         text-align: center;
+        border-top: #ffa31a2c solid 2px;
+        border-radius: 15%;
+
+        padding-top: 4vh;
     }
     .image-n-text:last-child {
-        margin-bottom: 8vh;
+        margin-bottom: 20vh;
     }
     .section-text p {
         width: 100%;
         font-size: 18px;
         padding: 0 10px;
+        margin-bottom: 20vh;
+        border-bottom: #ffa31a2c solid 2px;
+        border-radius: 15%;
+        padding-bottom: 4vh;
     }
     .forSale .cards {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100vh;
     }
     .forSale .card {
         flex-direction: row;
-        height: 30vh;
-        width: 100%;
-        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
     .forSale .card img {
         height: 25vh;
+        width: auto;
+        margin-left: 2vw;
     }
     .forSale .card ul {
-        height: 70%;
-        width: 100vw;
+        width: 25vw;
+        height: 25vh;
+        justify-content: space-evenly;
+    }
+    .forSale .card ul li {
+        font-size: 10px;
     }
     .forSale .plataforms {
         flex-direction: column;
-        height: 80%;
-        align-items: first baseline;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 240px;
+
+        height: 25vh;
     }
     .forSale .plataforms a {
-        width: 40px;
+        width: 42px;
+        height: 42px;
         position: relative;
-        height: 40px;
         border-radius: 12px;
         padding: 6px;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .forSale .plataforms a:hover {
         border: 2px solid #ffffff5e;
-        width: 250px;
+        width: 190px;
     }
     .forSale .plataforms a img {
         position: absolute;
@@ -634,13 +665,12 @@ footer span img {
         transition: none;
     }
     .forSale .plataforms a:hover img {
-        margin-left: -123px;
+        margin-left: -70%;
     }
 
     .forSale .plataforms a p {
         color: #fff;
         font-weight: bold;
-        margin-left: 50px;
         opacity: 0;
         z-index: 0;
         transition: all ease-in-out 300ms;
@@ -650,5 +680,116 @@ footer span img {
     .forSale .plataforms a:hover p {
         opacity: 1;
         z-index: 2;
+    }
+}
+@media (max-width: 950px) {
+    body {
+        border: red solid 1px;
+    }
+    header h1 {
+        font-size: 16px;
+    }
+    .header-right {
+        width: 120px;
+    }
+    header a {
+        font-size: 14px;
+    }
+    section .paragraph h2 {
+        font-size: 28px;
+    }
+    .divider {
+        margin: 8% 0;
+    }
+    section .paragraph span {
+        font-size: 20px;
+        text-align: center;
+    }
+    section .description {
+        justify-content: space-between;
+        padding: 0 4%;
+    }
+    section .description p,
+    .section-text p {
+        font-size: 12px;
+    }
+    section .description img {
+        height: 30vh;
+        object-fit: fill;
+    }
+    .information h2 {
+        font-size: 28px;
+    }
+    .image-n-text {
+        margin-bottom: 0;
+    }
+    .image-n-text:last-child {
+        margin-bottom: 8vh;
+    }
+    .image-n-text img {
+        width: 80vw;
+    }
+    .section-text {
+        width: 80vw;
+    }
+    .section-text span {
+        font-size: 24px;
+        margin-bottom: 2%;
+    }
+    .forSale {
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+    .forSale h2,
+    .see h1 {
+        width: 85vw;
+        font-size: 24px;
+    }
+    .forSale h2 img {
+        width: 40px;
+        margin-right: 1vw;
+    }
+    .forSale .cards {
+        width: 75%;
+        justify-content: space-evenly;
+    }
+    .forSale .card {
+        justify-content: center;
+        align-items: center;
+    }
+    .forSale .card img {
+        height: auto;
+        width: 50%;
+    }
+    .forSale .card ul {
+        width: 25vw;
+        margin: 0 2vw;
+    }
+    .forSale .plataforms {
+        flex-direction: row;
+        width: 80%;
+        height: auto;
+    }
+
+    .forSale .plataforms a {
+        width: 54px;
+        height: 54px;
+    }
+    .forSale .plataforms a:hover {
+        width: 100%;
+    }
+    .forSale .plataforms a p {
+        font-size: 12px;
+        margin-left: 10%;
+    }
+
+    .see-also {
+        border: gold solid 1px;
+        flex-direction: column;
+        gap: 32px;
+        width: 90vw;
+    }
+    .see-also img {
+        width: 50vw;
     }
 }

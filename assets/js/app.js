@@ -83,6 +83,7 @@ function animateInformation() {
         }
     });
     tlInformation.fromTo('.information h2', { opacity: 0 }, { opacity: 1, duration: 0.6 });
+    tlInformation.fromTo('.information .divider', { width: 0 }, { width: '80%', duration: 1 }, '-=0.3');
 }
 
 // fade
