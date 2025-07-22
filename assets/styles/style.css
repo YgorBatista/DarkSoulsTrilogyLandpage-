@@ -170,6 +170,7 @@ section .paragraph {
 section .paragraph h2 {
     color: var(--title-color);
     font-size: 64px;
+    text-align: center;
 }
 
 .divider {
@@ -397,6 +398,8 @@ section .description img {
     align-items: center;
     flex: 1;
     flex-wrap: wrap;
+    position: relative;
+    opacity: 0.7;
 }
 
 .see-also .see-info img {
@@ -406,16 +409,31 @@ section .description img {
     margin: 0 1vw;
     border-radius: 18px;
     transition: all 300ms ease-in-out;
-    opacity: 0.7;
 }
-.see-also img:hover {
+.see-also .see-info:hover img {
+    filter: blur(4px);
+    opacity: 0.5;
+}
+.see-also .see-info a {
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: end;
+    text-decoration: none;
+    color: wheat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 3% 5%;
+    opacity: 0;
+    transition: all ease-in-out 600ms;
+}
+
+.see-also .see-info a:hover {
     opacity: 1;
 }
-.see-also .see-info p {
-    width: 30vw;
-    font-size: 12px;
-    text-align: center;
-}
+
 footer {
     background-color: #1b1b1b;
 }
@@ -441,7 +459,7 @@ footer .social {
     height: 8vh;
     margin-top: 10px;
     display: flex;
-
+    order: 1;
     flex: 1;
     border-right: #3d3d3d67 solid 1px;
     justify-content: center;
@@ -465,6 +483,7 @@ footer h3 {
     font-size: 30px;
     display: flex;
     flex: 2;
+    order: 2;
     justify-content: center;
     align-items: center;
     border-right: #3d3d3d67 solid 1px;
@@ -486,6 +505,7 @@ footer .terms-about {
     margin-top: 12px;
     margin-left: 32px;
     flex: 1;
+    order: 3;
     gap: 8px;
     font-size: 14px;
 }
@@ -505,6 +525,7 @@ footer .creator {
     justify-content: center;
     font-size: 12px;
     margin-top: 12px;
+    background-color: #3b3b3b;
 }
 footer span img {
     margin: 10px 10px;
@@ -681,10 +702,33 @@ footer span img {
         opacity: 1;
         z-index: 2;
     }
+    .see-also {
+        flex-direction: column;
+        gap: 64px;
+        width: 75vw;
+    }
+    .see-also .see-info img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 0% 45%;
+    }
+    footer .social {
+        padding: 0 20px;
+    }
+    footer .social p {
+        font-size: 12px;
+    }
+    footer .social img {
+        width: 20px;
+        height: 20px;
+    }
+    footer .terms-about {
+        font-size: 12px;
+    }
 }
 @media (max-width: 950px) {
+    /* remover o main atual e adicionar um carrossel com as imagens e texto   */
     body {
-        border: red solid 1px;
     }
     header h1 {
         font-size: 16px;
@@ -711,10 +755,11 @@ footer span img {
     }
     section .description p,
     .section-text p {
-        font-size: 12px;
+        font-size: 10px;
     }
     section .description img {
         height: 30vh;
+
         object-fit: fill;
     }
     .information h2 {
@@ -747,15 +792,16 @@ footer span img {
     }
     .forSale h2 img {
         width: 40px;
-        margin-right: 1vw;
     }
     .forSale .cards {
-        width: 75%;
+        width: 100%;
         justify-content: space-evenly;
     }
     .forSale .card {
         justify-content: center;
         align-items: center;
+        width: 90vw;
+        margin: auto;
     }
     .forSale .card img {
         height: auto;
@@ -767,7 +813,7 @@ footer span img {
     }
     .forSale .plataforms {
         flex-direction: row;
-        width: 80%;
+        width: 90%;
         height: auto;
     }
 
@@ -784,12 +830,65 @@ footer span img {
     }
 
     .see-also {
-        border: gold solid 1px;
         flex-direction: column;
         gap: 32px;
         width: 90vw;
     }
     .see-also img {
         width: 50vw;
+    }
+    footer .info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .social {
+        height: 4vh;
+        width: 80vw;
+        flex: none;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+    footer .social img {
+        height: 4vh;
+
+        width: 8vw;
+        padding: 8px;
+        margin-top: 8.5px;
+        margin-left: 8.5px;
+    }
+    footer .social p {
+        height: 4vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10vw;
+
+        font-size: 16px;
+    }
+    footer h3 {
+        order: 0;
+        margin-top: 2vh;
+    }
+    footer h3,
+    footer .social {
+        border-right: none;
+    }
+    footer .terms-about {
+        margin: 2vh 0;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+    footer .creator {
+        font-size: 10px;
+    }
+    footer .creator img {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 20px;
     }
 }
