@@ -244,6 +244,9 @@ section {
     justify-content: center;
     align-items: center;
 }
+#about {
+    scroll-margin-top: 80px;
+}
 section .paragraph {
     display: flex;
     width: 100%;
@@ -367,7 +370,9 @@ section .description img {
 .section-text a:hover {
     color: white;
 }
-
+#buy {
+    scroll-margin-top: -80px;
+}
 .forSale {
     display: flex;
     background: linear-gradient(to bottom, #131313 0%, black 100%);
@@ -391,7 +396,7 @@ section .description img {
     filter: brightness(0) saturate(100%) invert(1);
 }
 .forSale .cards {
-    width: 70vw;
+    width: 60vw;
     display: flex;
     justify-content: space-between;
 }
