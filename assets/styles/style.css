@@ -252,7 +252,7 @@ section .paragraph {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    background-color: var(--bg-black-2);
+    background-color: var(--bg-black-1);
 }
 section .paragraph h2 {
     color: var(--title-color);
