@@ -68,7 +68,7 @@ function animateParagraph() {
         }
     );
     tlParagraph.fromTo('.paragraph h2', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5 });
-    tlParagraph.fromTo('.paragraph .divider', { width: 0 }, { width: '80%', duration: 1 }, '-=0.3');
+    tlParagraph.fromTo('.paragraph .divider', { width: 0 }, { width: '10%', duration: 1 }, '-=0.3');
     tlParagraph.fromTo('.paragraph span', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1 }, '-=0.5');
 }
 
@@ -83,7 +83,7 @@ function animateInformation() {
         }
     });
     tlInformation.fromTo('.information h2', { opacity: 0 }, { opacity: 1, duration: 0.6 });
-    tlInformation.fromTo('.information .divider', { width: 0 }, { width: '80%', duration: 1 }, '-=0.3');
+    tlInformation.fromTo('.information .divider', { width: 0 }, { width: '10%', duration: 1 }, '-=0.3');
 }
 
 // fade

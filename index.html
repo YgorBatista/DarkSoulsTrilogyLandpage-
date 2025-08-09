@@ -22,12 +22,51 @@
             </div>
         </header>
         <!-- adicionar um carrossel com esses textos e imagens para mobile  -->
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+
+                <div class="slide first">
+                    <img src="assets/img/ds1.jpg" alt="Dark Souls 1" class="slide active" />
+                    <div class="slide-text">
+                        <h6>Dark Souls</h6>
+                        <p>O início da maldição. Desperte como morto-vivo e descubra os segredos de Lordran.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/img/ds2.jpg" alt="Dark Souls 2" class="slide" />
+                    <div class="slide-text">
+                        <h6>Dark Souls II</h6>
+                        <p>Uma busca por identidade em Drangleic, onde cada alma tem um preço.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/img/ds3.jpg" alt="Dark Souls 3" class="slide" />
+                    <div class="slide-text">
+                        <h6>Dark Souls III</h6>
+                        <p>As chamas se apagam. Enfrente o fim dos tempos na terra dos Lordes Cinzas.</p>
+                    </div>
+                </div>
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
         <main class="container">
             <div class="card1">
                 <a class="ds1" href="#">
                     <img src="assets/img/ds1.jpg" alt="" />
                     <div class="text">
-                        <span>DARK SOULS REMASTERED </span>
+                        <span>DARK SOULS </span>
                         <p>
                             O Escolhido dos Mortos-Vivos viaja por Lordran para reunir as Almas dos Lordes e decidir se reacende a chama do mundo ou deixa que ela se apague, encerrando a Era do Fogo.
                         </p>
@@ -38,7 +77,7 @@
                 <a class="ds2" href="#">
                     <img src="assets/img/ds2.jpg" alt="" />
                     <div class="text">
-                        <span>DARK SOULS 2: SCHOLAR OF THE FIRST SIN</span>
+                        <span>DARK SOULS II</span>
                         <p>Em Drangleic, um novo amaldiçoado busca uma cura para sua maldição, enfrentando a repetição de ciclos de ascensão e queda alimentados pela chama e pelo esquecimento.</p>
                     </div>
                 </a>
@@ -47,7 +86,7 @@
                 <a class="ds3" href="#">
                     <img src="assets/img/ds3.jpg" alt="" />
                     <div class="text">
-                        <span>DARK SOULS 3: COMPLETE EDITION </span>
+                        <span>DARK SOULS III</span>
                         <p>No fim dos tempos, o Ashen One deve reunir os Senhores das Cinzas para reacender a chama ou romper o ciclo, selando o destino de um mundo à beira do colapso.</p>
                     </div>
                 </a>
@@ -63,46 +102,50 @@
 
             <div class="description fade">
                 <p>
-                    A trilogia Dark Souls explora um ciclo eterno entre luz e trevas, ordem e ruína. No primeiro jogo, o Escolhido dos Mortos-Vivos enfrenta um mundo em colapso, marcado por uma
-                    maldição e escolhas irreversíveis. No segundo, o Portador da Maldição busca respostas em uma terra diferente, mas conectada aos eventos passados. Já o terceiro apresenta o Inaceso,
-                    que se levanta em um mundo à beira do esquecimento para desafiar o fim do ciclo. Apesar de histórias distintas, os três jogos estão ligados por temas recorrentes e um destino
-                    cíclico.
+                    A trilogia Dark Souls explora o eterno ciclo entre luz e trevas. No primeiro jogo, o Escolhido dos Mortos-Vivos enfrenta um mundo em colapso. No segundo, o Portador da Maldição
+                    busca respostas em uma terra conectada ao passado. No terceiro, o Inaceso tenta impedir o fim do ciclo. Apesar das diferenças, os jogos compartilham temas e destinos recorrentes.
                 </p>
                 <img src="assets/img/firekepper.png" alt="" />
             </div>
             <div class="information" id="about">
                 <h2>Explore a Trilogia</h2>
                 <hr class="divider" />
-                <div class="image-n-text fade">
-                    <img src="assets/img/ds1-gameplay.webp" alt="" />
-                    <div class="section-text">
-                        <span>DARK SOULS </span>
-                        <p>
-                            Em um mundo moribundo onde os deuses perderam seu brilho, o jogador assume o papel do Chosen Undead, destinado a romper — ou perpetuar — o ciclo da chama. Entre ruínas
-                            esquecidas e monstros amaldiçoados, você trilha o caminho até a fornalha onde tudo começou. Sua decisão final determinará se a luz será prolongada ou se a escuridão tomará
-                            seu lugar por completo.
-                        </p>
+                <div class="exibition">
+                    <div class="image-n-text fade">
+                        <div class="image-wrapper"><img src="assets/img/ds1-gameplay.webp" alt="" /></div>
+                        <div class="section-text">
+                            <span>DARK SOULS </span>
+                            <p>
+                                Em um mundo moribundo onde os deuses perderam seu brilho, o jogador assume o papel do Chosen Undead, destinado a romper — ou perpetuar — o ciclo da chama. Entre ruínas
+                                esquecidas e monstros amaldiçoados, você trilha o caminho até a fornalha onde tudo começou. Sua decisão final determinará se a luz será prolongada ou se a escuridão
+                                tomará seu lugar por completo.
+                            </p>
+                            <a href="#"> saiba mais </a>
+                        </div>
                     </div>
-                </div>
-                <div class="image-n-text fade">
-                    <div class="section-text">
-                        <span>DARK SOULS 2: Scholar of the First Sin </span>
-                        <p>
-                            Na terra distante de Drangleic, outro amaldiçoado surge, guiado por ecos de promessas antigas e reis enlouquecidos. A chama queima mais fraca, e os rostos mudam, mas o
-                            ciclo continua. Com novas coroas, antigos pactos e uma constante sensação de déjà vu, o jogador percorre um mundo que esquece seus próprios erros — apenas para repeti-los.
-                        </p>
+                    <div class="image-n-text fade">
+                        <div class="section-text">
+                            <span>DARK SOULS 2: Scholar of the First Sin </span>
+                            <p>
+                                Na terra distante de Drangleic, outro amaldiçoado surge, guiado por ecos de promessas antigas e reis enlouquecidos. A chama queima mais fraca, e os rostos mudam, mas o
+                                ciclo continua. Com novas coroas, antigos pactos e uma constante sensação de déjà vu, o jogador percorre um mundo que esquece seus próprios erros — apenas para
+                                repeti-los.
+                            </p>
+                            <a href="#"> saiba mais </a>
+                        </div>
+                        <div class="image-wrapper"><img src="assets/img/ds2-gameplay.jpg" alt="" /></div>
                     </div>
-                    <img src="assets/img/ds2-gameplay.jpg" alt="" />
-                </div>
-                <div class="image-n-text fade">
-                    <img src="assets/img/ds3-gameplay.jpg" alt="" />
-                    <div class="section-text">
-                        <span>DARK SOULS 3 </span>
-                        <p>
-                            A era das cinzas chegou. Os Lords of Cinder, outrora heróis que sacrificaram tudo pela chama, agora recusam seu dever. Como um Unkindled, um ser rejeitado pelas chamas,
-                            você deve caçá-los e decidir: reacender o fogo mais uma vez ou permitir que ele se apague, encerrando o ciclo e dando espaço ao que vier depois. Um final sombrio para uma
-                            história que se recusa a terminar.
-                        </p>
+                    <div class="image-n-text fade">
+                        <div class="image-wrapper"><img src="assets/img/ds3-gameplay.jpg" alt="" /></div>
+                        <div class="section-text">
+                            <span>DARK SOULS 3 </span>
+                            <p>
+                                A era das cinzas chegou. Os Lords of Cinder, outrora heróis que sacrificaram tudo pela chama, agora recusam seu dever. Como um Unkindled, um ser rejeitado pelas chamas,
+                                você deve caçá-los e decidir: reacender o fogo mais uma vez ou permitir que ele se apague, encerrando o ciclo e dando espaço ao que vier depois. Um final sombrio para
+                                uma história que se recusa a terminar.
+                            </p>
+                            <a href="#"> saiba mais </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,7 +154,7 @@
             <h2><img src="assets/img/bag.png" alt="bag" />Compre agora</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="assets/img/ds-cover.jpg" alt="dark souls remastered cover " />
+                    <img class="cover" src="assets/img/ds-cover.jpg" alt="dark souls remastered cover " />
                     <ul>
                         <li>Inclui a DLC Artorias of the abysss</li>
                         <li>Gráficos aprimorados em 60FPS</li>
@@ -119,25 +162,25 @@
                     </ul>
                     <div class="plataforms">
                         <a class="playstation" href="https://store.playstation.com/pt-br/product/UP0700-CUSA08692_00-DARKSOULSHD00000"
-                            ><img src="assets/img/ps-logo.svg" alt="playstation link" />
+                            ><img class="console" src="assets/img/ps-logo.svg" alt="playstation link" />
                             <p>Playstation</p></a
                         >
                         <a class="xbox" href="https://www.xbox.com/pt-BR/games/store/dark-souls-remastered/bs18vcf4nlq9"
-                            ><img src="assets/img/xbox-logo.svg" alt="xbox link" />
+                            ><img class="console" src="assets/img/xbox-logo.svg" alt="xbox link" />
                             <p>Xbox</p></a
                         >
                         <a class="steam" href="https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/"
-                            ><img src="assets/img/steam-logo.svg" alt="steam link" />
+                            ><img class="console" src="assets/img/steam-logo.svg" alt="steam link" />
                             <p>Steam</p></a
                         >
                         <a class="nintendo" href="https://www.nintendo.com/pt-br/store/products/dark-souls-remastered-switch/?srsltid=AfmBOorMBr6yi744fJQPi_SNy64W4vnJeLr1U0A-4-SOnd_NYOcczS6j"
-                            ><img src="assets/img/nintendo-logo.svg" alt="nintendo link" />
+                            ><img class="console" src="assets/img/nintendo-logo.svg" alt="nintendo link" />
                             <p>Nintendo</p></a
                         >
                     </div>
                 </div>
                 <div class="card">
-                    <img src="assets/img/ds2-cover.jpg" alt="dark souls 2: scholar of the first sin cover " />
+                    <img class="cover" src="assets/img/ds2-cover.jpg" alt="dark souls 2: scholar of the first sin cover " />
                     <ul>
                         <li>Inclui as 3 DLCs: Crown of the Sunken, Iron e Ivory King</li>
                         <li>Versão Scholar of the First Sin com novos inimigos e NPC's</li>
@@ -145,21 +188,21 @@
                     </ul>
                     <div class="plataforms">
                         <a class="playstation" href="https://www.playstation.com/pt-br/games/dark-souls-ii-scholar-of-the-first-sin/"
-                            ><img src="assets/img/ps-logo.svg" alt="playstation link" />
+                            ><img class="console" src="assets/img/ps-logo.svg" alt="playstation link" />
                             <p>Playstation</p></a
                         >
                         <a class="xbox" href="https://www.xbox.com/pt-BR/games/store/dark-souls-ii-scholar-of-the-first-sin/BVBQ72FDB4LK"
-                            ><img src="assets/img/xbox-logo.svg" alt="xbox link " />
+                            ><img class="console" src="assets/img/xbox-logo.svg" alt="xbox link " />
                             <p>Xbox</p></a
                         >
                         <a class="steam" href="https://store.steampowered.com/app/335300/DARK_SOULS_II_Scholar_of_the_First_Sin/"
-                            ><img src="assets/img/steam-logo.svg" alt="steam link " />
+                            ><img class="console" src="assets/img/steam-logo.svg" alt="steam link " />
                             <p>Steam</p>
                         </a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="assets/img/ds3-cover.jpg" alt="dark souls 3: complete edition cover" />
+                    <img class="cover" src="assets/img/ds3-cover.jpg" alt="dark souls 3: complete edition cover" />
                     <ul>
                         <li>Inclui as DLCs: Ashes of Ariandel e The Ringed City</li>
                         <li>Acesso a novas armas, magias e chefes lendários</li>
@@ -167,15 +210,15 @@
                     </ul>
                     <div class="plataforms">
                         <a class="playstation" href="https://store.playstation.com/pt-pt/product/EP0700-CUSA03365_00-DSIIIDELUXE00000"
-                            ><img src="assets/img/ps-logo.svg" alt="playstation link " />
+                            ><img class="console" src="assets/img/ps-logo.svg" alt="playstation link " />
                             <p>Playstation</p></a
                         >
                         <a class="xbox" href="https://www.xbox.com/pt-BR/games/store/dark-souls-iii-deluxe-edition/C23CWXL81H3L/0001"
-                            ><img src="assets/img/xbox-logo.svg" alt="xbox link " />
+                            ><img class="console" src="assets/img/xbox-logo.svg" alt="xbox link " />
                             <p>Xbox</p></a
                         >
                         <a class="steam" href="https://store.steampowered.com/sub/94174/"
-                            ><img src="assets/img/steam-logo.svg" alt="steam link " />
+                            ><img class="console" src="assets/img/steam-logo.svg" alt="steam link " />
                             <p>Steam</p></a
                         >
                     </div>
@@ -231,5 +274,6 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script src="assets/js/app.js"></script>
+        <script src="assets/js/carrossel.js"></script>
     </body>
 </html>

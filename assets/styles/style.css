@@ -1,60 +1,142 @@
+:root {
+    --title-color: #ffae00;
+    --primary-text: #f9f9f6;
+    --secudary-text: #aaa;
+    --button-hover: #ffa31a;
+    --xbox-color: #107c10;
+    --nintendo-color: #e60012;
+    --playstation-color: #003087;
+    --steam-color: #202a41;
+    --font-title: spectral;
+    --font-size-title: 32px;
+    --hover-text-color: #fff;
+    --slide-text: #fff;
+    --bg-black-1: black;
+    --bg-black-2: #0d0d0d;
+
+    --bg-contend: #111111a9;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: cinzel;
     scroll-behavior: smooth;
-    --title-color: #ffae00;
-    --button-hover: #ffa31a;
-    --font-title: spectral;
 }
 body {
-    background-color: black;
-    color: aliceblue;
+    background-color: var(--bg-black-1);
+    color: var(--primary-text);
     margin: auto;
 }
 .container {
-    width: 90vw;
+    width: 100%;
 }
 header {
     display: flex;
-    height: 100px;
-    padding: 0 5%;
+    min-height: 100px;
+    padding: 0 2%;
     justify-content: space-between;
     align-items: center;
-
     background: linear-gradient(to bottom, #252525 0%, black 100%);
+    font-weight: bold;
 }
 header h1 {
     font-family: var(--font-title);
-    font-weight: 500;
+    color: var(--primary-text);
     font-size: 30px;
     cursor: default;
 }
 .header-right {
-    width: 200px;
+    width: 250px;
     display: flex;
     justify-content: space-around;
 }
 
 header a {
     font-family: var(--font-title);
-    font-weight: 400;
+
     font-size: 24px;
     text-decoration: none;
-    color: #ffffffb4;
+    color: var(--secudary-text);
     transition: all ease-in-out 200ms;
 }
 header a:hover {
-    color: #fff;
+    color: var(--hover-text-color);
 }
+/* slider */
+.slider {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 33vh;
+    overflow: hidden;
+}
+.slides {
+    width: 400%;
+
+    min-height: 400px;
+    display: flex;
+}
+.slides input {
+    display: none;
+}
+.slide {
+    width: 25%;
+    position: relative;
+    transition: all ease-in-out 1s;
+}
+.slide img {
+    width: 100%;
+    min-height: 30vh;
+    object-fit: cover;
+
+    opacity: 0.5;
+}
+.slide-text {
+    border: solid 1px;
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: var(--slide-text);
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.329);
+    backdrop-filter: blur(2px);
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: left;
+    width: 70%;
+    max-width: 200px;
+    border: #1b1b1bb9 1px solid;
+}
+.slide-text h6 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: #ffa31a2c 1px solid;
+}
+.slide-text p {
+    font-size: 10px;
+}
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+/* fim do slider */
 main {
     position: relative;
     height: 40vw;
-    min-height: 60vh;
     aspect-ratio: 16/9;
     margin: auto;
     display: flex;
+    display: block;
     overflow: hidden;
 }
 
@@ -62,7 +144,6 @@ main {
 .ds2 img,
 .ds3 img {
     height: 110%;
-    width: 50%;
     object-fit: cover;
     position: absolute;
 }
@@ -116,8 +197,8 @@ main {
 .ds2 .text,
 .ds3 .text {
     display: flex;
-    width: 30vw;
-    height: 25vh;
+    width: 25vw;
+    min-height: 20vh;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
@@ -126,14 +207,14 @@ main {
     left: 2%;
     visibility: hidden;
     z-index: 999;
-    padding: 10px 30px;
+    padding: 50px 30px;
     font-size: 16px;
     line-height: 18px;
     color: rgba(255, 255, 255, 0.904);
-    background-color: rgba(0, 0, 0, 0.233);
-    backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.459);
+    backdrop-filter: blur(4px);
     border-radius: 12px;
-    border: #ffffff60 solid 2px;
+    border: #1b1b1bb9 1px solid;
     transition: opacity 1s ease, visibility 100ms ease;
     transition-delay: 500ms;
 }
@@ -146,8 +227,16 @@ main {
 .ds2 .text span,
 .ds3 .text span {
     font-size: 28px;
+    width: 100%;
     font-weight: 600;
     line-height: 28px;
+    border-bottom: #ffa31a2c 2px solid;
+    padding-bottom: 3%;
+}
+.ds1 .text p,
+.ds2 .text p,
+.ds3 .text p {
+    margin-top: 16px;
 }
 section {
     display: flex;
@@ -157,50 +246,59 @@ section {
 }
 section .paragraph {
     display: flex;
-    width: 75vw;
+    width: 100%;
     height: 50vh;
-    margin-bottom: 8vh;
-    margin-top: 8vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     opacity: 0;
+    background-color: var(--bg-black-2);
 }
 section .paragraph h2 {
     color: var(--title-color);
-    font-size: 64px;
+
+    font-size: 32px;
+    line-height: 0%;
     text-align: center;
 }
 
-.divider {
+section .divider {
     width: 0px;
     height: 1px;
     background-color: var(--title-color);
-    margin: 4% 0;
+    margin: 2% 0;
+
     border: none;
     transition: all 1s ease;
 }
 section .paragraph span {
     color: var(--title-color);
-    font-size: 30px;
+    font-size: 24px;
+    line-height: 0%;
 }
 section .description {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    padding: 0% 10%;
-    margin: auto;
+    padding: 0 15vw;
     flex-direction: row;
 }
+
 section .description p {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 0%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 section .description img {
-    height: 70vh;
-    margin-bottom: 10%;
+    height: 700px;
+    margin-bottom: 8vh;
     mask-image: linear-gradient(to top, transparent 0%, black 20%);
+    opacity: 0.7;
 }
 
 .information {
@@ -208,65 +306,78 @@ section .description img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    background-color: #1b1b1b46;
-    width: 100%;
 }
 .information h2 {
-    color: var(--title-color);
     text-align: center;
-    font-size: 64px;
-    margin-top: 10vh;
-    opacity: 1;
+    font-size: var(--font-size-title);
+    color: var(--button-hover);
 }
-.image-n-text {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 8vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15vw;
-}
-.image-n-text:last-child {
-    margin-bottom: 15vh;
-}
-.image-n-text img {
-    width: 37vw;
-
-    border-radius: 3%;
-}
-.section-text {
+.exibition {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
+    gap: 32px;
+    margin: 8vh 0;
+}
+.image-n-text {
+    background-color: var(--bg-contend);
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    width: 70vw;
+}
 
-    width: 33vw;
+.image-n-text .image-wrapper {
+    display: flex;
+    flex: 1;
+}
+.image-n-text img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    opacity: 0.7;
+    object-fit: cover;
+}
+.image-n-text .section-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.section-text span,
+.section-text p,
+.section-text a {
+    padding: 0 4%;
+    font-weight: 600;
 }
 .section-text span {
-    width: 100%;
-    padding: 0 2%;
-    margin-bottom: 4%;
-    font-size: 32px;
+    font-size: 24px;
+    font-weight: bold;
 }
 .section-text p {
-    width: 100%;
-    padding: 2%;
-    font-size: 20px;
-    line-height: 1.4;
+    line-height: 24px;
+    word-spacing: 2px;
+    color: var(--secudary-text);
 }
+
+.section-text a {
+    text-decoration: none;
+    color: var(--button-hover);
+    transition: all ease-in-out 300ms;
+}
+.section-text a:hover {
+    color: white;
+}
+
 .forSale {
     display: flex;
     background: linear-gradient(to bottom, #131313 0%, black 100%);
-
     padding-top: 8vh;
     padding-bottom: 8vh;
     width: 100%;
 }
 .forSale h2 {
-    font-size: 48px;
-    width: 72vw;
+    font-size: var(--font-size-title);
+    width: 80vw;
     margin: auto;
     margin-bottom: 8vh;
     display: flex;
@@ -274,30 +385,26 @@ section .description img {
     align-items: center;
 }
 .forSale h2 img {
-    width: 72px;
+    width: 48px;
     padding-bottom: 10px;
     margin-right: 2vh;
     filter: brightness(0) saturate(100%) invert(1);
 }
 .forSale .cards {
-    width: 80vw;
-    margin: auto;
-    gap: 32px;
-
+    width: 70vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .forSale .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    border: #20202077 solid 2px;
-    align-items: center;
-    margin: 0 3%;
-    flex: 1;
+    border: #202020ca solid 2px;
+    width: 30%;
     border-radius: 12px;
+    background-color: var(--bg-contend);
     transition: ease 0.4s all;
     opacity: 0.7;
 }
@@ -307,35 +414,36 @@ section .description img {
     scale: 1.01;
     opacity: 1;
 }
-.forSale .card img {
-    width: 80%;
-    margin: 1vh 0;
-    height: auto;
-    aspect-ratio: 2/3;
+.forSale .card .cover {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
     border-radius: 12px;
     transition: ease-in-out 500ms;
+    mask-image: linear-gradient(to top, transparent 0%, black 20%);
 }
 
 .forSale .card ul {
-    width: 80%;
-    height: 25vh;
+    width: 100%;
+    margin-top: -2vh;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: left;
+    align-items: center;
     list-style-type: none;
 }
 .forSale .card ul li {
-    font-size: 16px;
+    width: 80%;
+    text-align: center;
 }
 .forSale .plataforms {
     display: flex;
-    width: 100%;
+
+    width: 90%;
+    margin-bottom: 20px;
     justify-content: space-evenly;
     align-items: center;
-    animation-delay: 400ms;
-    margin-bottom: 2vh;
-    margin-top: 2vh;
 }
 .forSale .plataforms a {
     display: flex;
@@ -344,34 +452,34 @@ section .description img {
     border: solid white 2px;
     border-radius: 100%;
     width: 60px;
-    height: 60px;
+    min-height: 60px;
     text-decoration: none;
-    transition: background-color ease-in-out 200ms, width ease-in-out 500ms;
+    transition: background-color ease-in-out 200ms, width ease-in-out 600ms;
 }
 
 .forSale .plataforms a img {
-    width: 60%;
-    height: 60%;
-
+    width: 30px;
+    height: 30px;
     margin: 0;
     padding: 0;
+    mask-image: none;
 }
 .xbox:hover {
-    background-color: #107c10;
+    background-color: var(--xbox-color);
 }
 .nintendo:hover {
-    background-color: #e60012;
+    background-color: var(--nintendo-color);
 }
 .steam:hover {
-    background-color: #202a41;
+    background-color: var(--steam-color);
 }
 .playstation:hover {
-    background-color: #003087;
+    background-color: var(--playstation-color);
 }
 .forSale .plataforms a p {
     display: none;
     text-decoration: none;
-    color: #fff;
+    color: var(--hover-text-color);
 }
 .see {
     display: flex;
@@ -384,13 +492,13 @@ section .description img {
 }
 .see h1 {
     text-align: left;
-    width: 70vw;
+    width: 100%;
+    padding: 0 10vw;
     margin-bottom: 8vh;
-    font-size: 48px;
+    font-size: var(--font-size-title);
 }
 .see-also {
     display: flex;
-    padding: 3vh 0;
 }
 .see-also .see-info {
     display: flex;
@@ -403,7 +511,7 @@ section .description img {
 }
 
 .see-also .see-info img {
-    width: 30vw;
+    width: 25vw;
     height: auto;
     border: #2b2a2ab4 solid 2px;
     margin: 0 1vw;
@@ -425,7 +533,7 @@ section .description img {
     position: absolute;
     height: 100%;
     width: 100%;
-    padding: 3% 5%;
+    padding: 10%;
     opacity: 0;
     transition: all ease-in-out 600ms;
 }
@@ -443,8 +551,9 @@ footer .info {
     align-self: center;
     width: 100%;
     margin: 0 auto;
+    padding: 4vh 0;
     font-size: 1.5rem;
-    color: #aaa;
+    color: var(--secudary-text);
 }
 footer .rights {
     display: flex;
@@ -456,7 +565,7 @@ footer h5 {
     font-size: 14px;
 }
 footer .social {
-    height: 8vh;
+    height: 10vh;
     margin-top: 10px;
     display: flex;
     order: 1;
@@ -480,7 +589,7 @@ footer .social img:hover {
     opacity: 1;
 }
 footer h3 {
-    font-size: 30px;
+    font-size: 38px;
     display: flex;
     flex: 2;
     order: 2;
@@ -506,11 +615,11 @@ footer .terms-about {
     margin-left: 32px;
     flex: 1;
     order: 3;
-    gap: 8px;
+    gap: 16px;
     font-size: 14px;
 }
 footer .terms-about p {
-    color: #aaa;
+    color: var(--secudary-text);
     transition: all 300ms ease-in-out;
 }
 footer .terms-about p:hover {
@@ -533,137 +642,162 @@ footer span img {
     height: 35px;
 }
 
-@media (max-width: 1790px) {
+@media (max-width: 1450px) {
+    header h1 {
+        font-size: 20px;
+    }
+    .header-right {
+        width: 150px;
+    }
+    header a {
+        font-size: 14px;
+    }
+    main {
+        height: 45vh;
+    }
+    .ds1 .text,
+    .ds2 .text,
+    .ds3 .text {
+        width: 40vw;
+        left: 4%;
+    }
     section .paragraph {
-        margin-top: 4vh;
-        margin-bottom: 4vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        height: 30vh;
     }
     section .paragraph h2 {
-        font-size: 48px;
+        font-size: 32px;
+        margin-bottom: 1vh;
     }
     .divider {
-        margin: 2% 0;
+        margin: 0 20%;
     }
     section .paragraph span {
-        font-size: 24px;
-    }
-    .section-text span {
-        font-size: 24px;
-    }
-    .section-text p {
-        font-size: 14px;
+        font-size: 20px;
+
+        margin-top: 1vh;
     }
 
     section .description p {
-        font-size: 20px;
+        font-size: 16px;
     }
+
     section .description img {
         height: 38vh;
     }
-    .information h2 {
-        font-size: 48px;
-        margin-bottom: 2vh;
+    .image-n-text {
+        flex-direction: column;
     }
-    .information .divider {
-        margin-bottom: 10vh;
+    .image-n-text:nth-last-of-type(2) {
+        flex-direction: column-reverse;
+    }
+    .section-text span,
+    .section-text p,
+    .section-text a {
+        padding: 2vh 10vw;
+        text-align: center;
+    }
+    .section-text span {
+        margin-top: 2vh;
+    }
+    .forSale {
+        padding-top: 4vh;
+        padding-bottom: 4vh;
     }
     .forSale h2,
     .see h1 {
-        font-size: 36px;
+        font-size: 32px;
 
+        width: 100%;
+        padding: 0 15vw;
         margin-bottom: 2vh;
     }
 
-    .forSale .card img {
-        width: 80%;
-        min-width: auto;
+    .forSale .card .cover {
+        height: 60%;
+    }
+    .forSale .card ul {
+        min-height: 200px;
+        margin-top: -1vh;
     }
     .forSale .card ul li {
         font-size: 12px;
         margin: 1vh;
     }
+    .forSale .plataforms {
+        width: 100%;
+    }
     .forSale .plataforms a {
         width: 50px;
-        height: 50px;
+        min-height: 50px;
+    }
+    .forSale .plataforms a img {
+        width: 25px;
+        height: 25px;
     }
     .see h1 {
-        margin-top: 6vh;
+        margin-top: 0vh;
+    }
+
+    .see-also .see-info img {
+        width: 30vw;
+    }
+    .see-also .see-info a {
+        font-size: 14px;
+        padding: 8%;
+        padding-bottom: 10%;
     }
 }
-@media (max-width: 1250px) {
+@media (max-width: 1280px) {
     body {
+        border: solid 1px;
     }
-    .image-n-text {
-        display: flex;
-        flex-direction: column;
-    }
-    .image-n-text:nth-of-type(2) {
-        flex-direction: column-reverse;
-    }
-    .image-n-text img {
-        width: 60vw;
-    }
-    .section-text {
-        width: 60vw;
-        display: flex;
-
-        align-items: center;
-    }
-    .section-text span {
-        width: 100%;
-        margin-top: 10%;
-        margin-bottom: 10%;
-        font-size: 42px;
-        text-align: center;
-        border-top: #ffa31a2c solid 2px;
-        border-radius: 15%;
-
-        padding-top: 4vh;
-    }
-    .image-n-text:last-child {
-        margin-bottom: 20vh;
-    }
-    .section-text p {
-        width: 100%;
-        font-size: 18px;
-        padding: 0 10px;
-        margin-bottom: 20vh;
-        border-bottom: #ffa31a2c solid 2px;
-        border-radius: 15%;
-        padding-bottom: 4vh;
+    .forSale h2 {
+        font-size: 24px;
+        padding: 0 10vw;
     }
     .forSale .cards {
         display: flex;
         flex-direction: column;
+        gap: 32px;
         justify-content: space-between;
     }
     .forSale .card {
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    .forSale .card img {
-        height: 25vh;
+        flex: 1;
         width: auto;
-        margin-left: 2vw;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 300px;
+    }
+    .forSale .card .cover {
+        height: 300px;
+        width: auto;
+        mask-image: none;
+        border-radius: 0;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
     }
     .forSale .card ul {
-        width: 25vw;
-        height: 25vh;
+        width: 22vw;
+        height: 300px;
+        margin-top: 0;
         justify-content: space-evenly;
     }
     .forSale .card ul li {
-        font-size: 10px;
+        font-size: 12px;
     }
     .forSale .plataforms {
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-evenly;
-        width: 240px;
-
-        height: 25vh;
+        width: 200px;
+        height: 300px;
+        margin-bottom: 0;
     }
+
     .forSale .plataforms a {
         width: 42px;
         height: 42px;
@@ -681,12 +815,12 @@ footer span img {
     }
     .forSale .plataforms a img {
         position: absolute;
-        width: 60%;
-        height: 60%;
-        transition: none;
+        width: 25px;
+        height: 25px;
+        transition-delay: 100ms;
     }
     .forSale .plataforms a:hover img {
-        margin-left: -70%;
+        display: none;
     }
 
     .forSale .plataforms a p {
@@ -707,10 +841,20 @@ footer span img {
         gap: 64px;
         width: 75vw;
     }
+    .see h1 {
+        font-size: 24px;
+        padding: 0 10vw;
+    }
     .see-also .see-info img {
-        width: 100%;
+        width: 80%;
         object-fit: cover;
         object-position: 0% 45%;
+    }
+    .see-also .see-info a {
+        width: 80%;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5%;
     }
     footer .social {
         padding: 0 20px;
@@ -726,60 +870,70 @@ footer span img {
         font-size: 12px;
     }
 }
-@media (max-width: 950px) {
-    /* remover o main atual e adicionar um carrossel com as imagens e texto   */
+@media (max-width: 850px) {
     body {
+        border: #107c10 solid 1px;
+    }
+
+    header {
+        min-height: 60px;
     }
     header h1 {
-        font-size: 16px;
+        font-size: 12px;
     }
     .header-right {
-        width: 120px;
+        width: 80px;
     }
     header a {
-        font-size: 14px;
+        font-size: 10px;
+    }
+    .slider {
+        display: block;
+    }
+    main {
+        display: none;
     }
     section .paragraph h2 {
         font-size: 28px;
     }
-    .divider {
-        margin: 8% 0;
+
+    section .paragraph {
+        height: 15vh;
     }
     section .paragraph span {
-        font-size: 20px;
+        font-size: 12px;
         text-align: center;
     }
     section .description {
+        align-items: center;
         justify-content: space-between;
-        padding: 0 4%;
+        padding: 0 10%;
+        margin-bottom: 8vh;
     }
-    section .description p,
-    .section-text p {
+    section .description p {
         font-size: 10px;
+        min-height: 20vh;
     }
     section .description img {
-        height: 30vh;
+        mask-image: none;
+        height: 20vh;
+        margin-bottom: 0;
 
         object-fit: fill;
     }
-    .information h2 {
-        font-size: 28px;
-    }
     .image-n-text {
-        margin-bottom: 0;
-    }
-    .image-n-text:last-child {
-        margin-bottom: 8vh;
+        width: 80vw;
     }
     .image-n-text img {
-        width: 80vw;
-    }
-    .section-text {
-        width: 80vw;
+        min-height: 0;
     }
     .section-text span {
-        font-size: 24px;
-        margin-bottom: 2%;
+        font-size: 16px;
+    }
+    .section-text p,
+    .section-text a {
+        font-size: 10px;
+        line-height: normal;
     }
     .forSale {
         padding-top: 4vh;
@@ -787,39 +941,49 @@ footer span img {
     }
     .forSale h2,
     .see h1 {
-        width: 85vw;
-        font-size: 24px;
+        width: 90vw;
+        margin-bottom: 6vh;
+        font-size: 28px;
+        justify-content: center;
+        text-align: center;
     }
     .forSale h2 img {
         width: 40px;
+        margin-right: 8px;
     }
     .forSale .cards {
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     .forSale .card {
         justify-content: center;
         align-items: center;
-        width: 90vw;
+        width: 80vw;
+        max-width: 500px;
         margin: auto;
     }
-    .forSale .card img {
+    .forSale .card .cover {
         height: auto;
+        margin-left: -8vw;
         width: 50%;
+        max-width: 250px;
     }
     .forSale .card ul {
-        width: 25vw;
-        margin: 0 2vw;
+        width: 40%;
     }
     .forSale .plataforms {
         flex-direction: row;
+        justify-content: space-around;
         width: 90%;
+
+        margin: 3vh 0;
         height: auto;
     }
 
     .forSale .plataforms a {
         width: 54px;
         height: 54px;
+        transition-delay: 200ms;
     }
     .forSale .plataforms a:hover {
         width: 100%;
@@ -827,6 +991,8 @@ footer span img {
     .forSale .plataforms a p {
         font-size: 12px;
         margin-left: 10%;
+        transition: all ease-in-out 300ms;
+        transition-delay: 200ms;
     }
 
     .see-also {
@@ -836,6 +1002,12 @@ footer span img {
     }
     .see-also img {
         width: 50vw;
+    }
+    .see-also .see-info a {
+        font-size: 10px;
+        padding-bottom: 30px;
+        font-weight: bold;
+        padding: 5% 15%;
     }
     footer .info {
         flex-direction: column;
@@ -881,7 +1053,7 @@ footer span img {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 32px;
+        gap: 16px;
     }
     footer .creator {
         font-size: 10px;
@@ -890,5 +1062,28 @@ footer span img {
         width: 20px;
         height: 20px;
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        border: rgb(72, 211, 221) solid 3px;
+    }
+    .slide img {
+        min-height: 50vh;
+    }
+    .slide-text {
+        left: 30%;
+        bottom: 5%;
+    }
+    section .paragraph h2,
+    .information h2 {
+        font-size: 18px;
+    }
+    section .paragraph span {
+        font-size: 11px;
+    }
+    section .description p {
+        font-size: 8px;
     }
 }
