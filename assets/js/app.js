@@ -2,11 +2,12 @@ function applyTextHover(containerSelector) {
     const container = document.querySelector(containerSelector);
     const img = container.querySelector('img');
     const text = container.querySelector('.text');
+    const main = document.querySelector('main');
 
     //verificacao para aplicar o efeito
     if (!container || !img || !text) return;
 
-    //alteração no hover
+    //alteração ao passar o mouse
 
     container.addEventListener('mouseenter', () => {
         document.querySelectorAll('.text').forEach(t => {
@@ -25,7 +26,7 @@ function applyTextHover(containerSelector) {
         text.style.visibility = 'visible';
     });
 
-    //alteração ao sair do hover
+    //alteração ao sair do mouse
 
     container.addEventListener('mouseleave', () => {
         text.style.opacity = '0';
@@ -39,10 +40,6 @@ function applyTextHover(containerSelector) {
 }
 
 //onde aplicar o efeito
-
-applyTextHover('.ds1');
-applyTextHover('.ds2');
-applyTextHover('.ds3');
 
 // elementos com  gsap
 // funções de animação paragraph e information
@@ -85,11 +82,16 @@ function animateInformation() {
     tlInformation.fromTo('.information h2', { opacity: 0 }, { opacity: 1, duration: 0.6 });
     tlInformation.fromTo('.information .divider', { width: 0 }, { width: '10%', duration: 1 }, '-=0.3');
 }
+// animate para o main fade in
+gsap.fromTo('main', { opacity: 0 }, { opacity: 1, duration: 3, ease: 'easeInOut ', scrollTrigger: { trigger: 'main', start: 'top 60%', toggleActions: 'play none none none' } });
 
 // fade
 document.querySelectorAll('.fade').forEach(e => {
     gsap.fromTo(e, { opacity: 0, y: '20px' }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', scrollTrigger: { trigger: e, start: 'top 60%', toggleActions: 'play none none none' } });
 });
 
+applyTextHover(['.ds1']);
+applyTextHover('.ds2');
+applyTextHover('.ds3');
 animateParagraph();
 animateInformation();
